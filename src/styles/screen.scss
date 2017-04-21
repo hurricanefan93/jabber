@@ -11,3 +11,16 @@ body {
   margin: 0;
   font: $base-text-size / 1 $base-font-family;
 }
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.LetterBrowser {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+}
