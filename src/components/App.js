@@ -12,18 +12,25 @@ import LetterBrowser from './LetterBrowser.js'
 class App extends Component {
   render () {
     return <Router>
-      <div>
-        <h1><Link to='/'>The Jabberdexicon</Link></h1>
-        <LetterBlock />
-        <form action='#'>
-          <input type='search' />
-        </form>
+      <div className='App'>
+        <header>
+          <h1 className='Title'><Link to='/'>The Jabberdexicon</Link></h1>
+          <form action='#'>
+            <input type='search' placeholder='Search' />
+          </form>
+        </header>
+        <LetterBlock className='Nav' />
         <AddEntry />
         <Route exact path='/' component={Home} />
         <Route path='/entry/:slug' render={(props) => (
           <Entry term='' defintion='' {...props} />
       )} />
         <Route path='/browse/:letter' component={LetterBrowser} />
+        {/* <Route path='/addentry' component={AddEntry} /> */}
+
+        <footer>
+          <p> Built with React, at the Iron Yard. By Garret Morales </p>
+        </footer>
       </div>
     </Router>
   }
